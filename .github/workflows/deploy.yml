@@ -29,16 +29,13 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "npm install"
-
-      - name: Build step
-        run: "deno task build"
+        run: "npm install package.json"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "alexanderqu-cors-anywhe-62"
-          entrypoint: "npm server.js"
-          root: "."
+          project: "cors-anywhere123"
+          entrypoint: "server.js"
+          root: ""
           
           
